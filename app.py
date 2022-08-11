@@ -108,11 +108,6 @@ def show_venue(venue_id):
   # TODO: replace with real venue data from the venues table, using venue_id
 
     venue = Venue.query.get(venue_id)
-    print("This is debugging")
-    print(venue.name)
-    print(venue.phone)
-    print(venue)
-
     shows = Show.query.filter_by(venue_id=venue_id).all()
     past_shows = []
     upcoming_shows = []
@@ -185,33 +180,39 @@ def create_venue_submission():
 #  Delete Venue
 #  -----------------------------------------------------------------------------------------------------------------------------------------
 
-@app.route('/venues/<venue_id>', methods=['DELETE'])
+@app.route('/venues/<int:venue_id>/delete', methods=['GET'])
 def delete_venue(venue_id):
+    venue = Venue.query.get(venue_id)
+    form = VenueForm(obj=venue)
+
+    return render_template('forms/delete_venue.html', form=form, venue=venue)
+
+@app.route('/venues/<int:venue_id>/delete', methods=['POST'])
+def delete_venue_submission(venue_id):
     # TODO: Complete this endpoint for taking a venue_id, and using
     # SQLAlchemy ORM to delete a record. Handle cases where the session commit could fail.
 
     # BONUS CHALLENGE: Implement a button to delete a Venue on a Venue Page, have it so that
     # clicking that button delete it from the db then redirect the user to the homepage
 
-    error = False
+    form = VenueForm(request.form)
+
     try:
         venue = Venue.query.get(venue_id)
+        form.populate_obj(venue)
         db.session.delete(venue)
         db.session.commit()
+        flash('Venue  was successfully deleted!')
 
     except:
         db.session.rollback()
-        error = True
+        flash('An error occurred. Venue could not be deleted.')
 
     finally:
         db.session.close()
 
-    if error:
-        abort(500)
-    else:
-        return jsonify({'success': True})
+    return redirect(url_for('index'))
 
-    return None
 
 #  Artists
 #  ----------------------------------------------------------------
