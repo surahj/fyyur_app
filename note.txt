@@ -1,0 +1,39 @@
+
+
+ ###To find pg_hba.conf directory in linux
+ sudo find / -type f -name pg_hba.conf
+
+### To find pg_hba.conf directory in linux through runnning process
+ps aux | grep postgres | grep -- -D
+
+## To start a postgres server
+sudo service postgresql start
+
+## To stop a postgres server
+sudo service postgresql stop
+
+## To update ubuntu before installing software
+sudo apt-get update
+
+## To upgrade ubuntu before installing software
+sudo apt-get upgrade
+
+## To create a database in postgress
+CREATE DATABASE todoapp;
+
+### Initialize and activate a virtualenv using:
+python3 -m virtualenv env
+source env/bin/activate
+#Deactivate virtualenv
+deactivate
+
+
+
+https://coffeedev.us.auth0.com/authorize?audience=coffee&response_type=token&client_id=owgWybdUrK9dywQnyiqV9U402N9TgOei&redirect_uri=http://127.0.0.1:8080/login-result
+
+manager jwt
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkxPUHRieTNDY1A1X3hmeF8xaTRVUCJ9.eyJpc3MiOiJodHRwczovL2NvZmZlZWRldi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMyMDhiYjc3N2NjNzhjYWNkN2Y0ZGRjIiwiYXVkIjoiY29mZmVlIiwiaWF0IjoxNjYzMjYzMjMxLCJleHAiOjE2NjMyNzA0MzEsImF6cCI6Im93Z1d5YmRVcks5ZHl3UW55aXFWOVU0MDJOOVRnT2VpIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZHJpbmtzIiwiZ2V0OmRyaW5rcyIsImdldDpkcmlua3MtZGV0YWlsIiwicGF0Y2g6ZHJpbmtzIiwicG9zdDpkcmlua3MiXX0.EqavIKu34OUIW0VKqUp65UER1FVL7AOz4hLxp1s1tbXgS4YC88cL3VhaO7kMywW9C94UlZ-vBBKyYMMWijiaew5NGyNUUBxtuRZzY7E7NcfmA9A-8H3QhQrq2DGRj6XdSYhRp8PkVdJJocED5Aoebbw906soTCjEqQlcCv_cijMS8y79LVL1E83PUdzOGzRDQGGOAMm1XO9cZKS1q_65D1rvtqCohV1hLHLIoi8HhleNXTVm1KSROAEoyOB_nGGjiWsjhAp6v_R1ADfuz4sil5VJcuiUcVHoLBoAs1dzw9WDNIa7CgFQ5ckWyCVFKKaOeVPaFQad3POqRKTWpeiquA
+
+barista jwt
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkxPUHRieTNDY1A1X3hmeF8xaTRVUCJ9.eyJpc3MiOiJodHRwczovL2NvZmZlZWRldi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMyMDc5MWVlMTVlYmE5NDNiNWI5MWQ0IiwiYXVkIjoiY29mZmVlIiwiaWF0IjoxNjYzMTc1OTQxLCJleHAiOjE2NjMxODMxNDEsImF6cCI6Im93Z1d5YmRVcks5ZHl3UW55aXFWOVU0MDJOOVRnT2VpIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.YZB9aolbUNm8I4qUblwHBoeHJTctqNQnWCSTfsSBbU-wZbsrhD7uZp6kBfZJRpOFSBtYafRW3kOhhK3R-n41MAW7XChmdWToimppczunRYR3NgUElU8YvUnIsutiDIkxTiFi_LqUR6KyX8Fb1403FUvE37e3315ff84-y2twc6E_aVvLiiewqxolQdBY0SKFrQCs-DA53MGwriwzA9eeNpVJNQtPzDYEzskQLJhsgNO79a-i-sTTORjv7rucsKIDVUBUV5CSISFAYqYrWKzslfBxXsUuusDipstl_roabXMQssBOJYwZ-IQy_BCyDqnjCLhVm9sIWSV4MUJl14m_ZA
+
